@@ -18,10 +18,10 @@
 	<div class="landing fadeIn" id="home">
 		<div class="navigation">
 			<img src="images/logo3.jpg" id="logo" alt="">
-			<div class="menu-toggle">
+			<div class="menu-toggle" id="menu" onclick="toggle();">
 
 			</div>
-			<div class="navigation-bar">
+			<div class="navigation-bar" id="bars">
 				<ul>
 					<a href="#home">
 						<li>Home</li>
@@ -48,7 +48,7 @@
 			<button class="animated bounce delay-4s learn-btn" id="sign-in">BOOK A TABLE</button>
 		</div>
 		<div class="chevron">
-			<a href="#work"><i class='fas fa-angle-down'></i></a>
+			<a href="#about"><i class='fas fa-angle-down'></i></a>
 		</div>
 	</div>
 	<div class="about" id="about">
@@ -317,23 +317,8 @@
 			<p style="text-align: center;font-size: 25px;">Designed by <span id="team" style="font-size: 25px;">Team Cyphers</span></p>
 		</div>
 	</div>
-	<script>
-		function showveg() {
-			document.getElementById("non_veg").style.display = "none";
-			document.getElementById("veg").style.display = "block";
-		}
-
-		function shownon_veg() {
-			document.getElementById("veg").style.display = "none";
-			document.getElementById("non_veg").style.display = "block";
-
-		}
-		$(document).ready(function() {
-			$(".menu-toggle").click(function() {
-				$(".menu-toggle").toggleClass('active');
-				$(".navigation-bar").toggleClass('active');
-			})
-		})
+	<script src="file.js">
+		
 	</script>
 </body>
 
