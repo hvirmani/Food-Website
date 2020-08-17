@@ -15,3 +15,14 @@ function toggle() {
 	var navo = document.getElementById("bars");
 	navo.classList.toggle("active");
 }
+
+function show() {
+	var txt = document.getElementById("input_txt").value;
+	var member = document.getElementById("member").value;
+	var msg = document.getElementById("msg").value;
+
+	if (msg === '')
+		alert(`Congrats ${txt} a table of ${member} members has been booked.`);
+	else
+		alert(`Congrats ${txt} a table of ${member} members has been booked.\nWe will take care of special message!`);
+}

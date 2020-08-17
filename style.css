@@ -550,6 +550,7 @@
 			margin: auto 10px;
 			border: none;
 			border-radius: 10px;
+			padding: 10px 15px;
 			background: #ff0066;
 			color: #fff;
 		}
@@ -674,5 +675,87 @@
 
 			small {
 				font-size: 25px;
+			}
+		}
+
+		.book_table {
+			min-height: 40vh;
+			text-align: center;
+		}
+
+		.book {
+			background: #ff0066;
+			color: #fff;
+		}
+
+		form {
+			max-width: 900px;
+			margin: auto;
+			padding: 20px;
+			text-align: center;
+		}
+
+		input,
+		textarea {
+			margin: 1.5% 0;
+			width: 49.5%;
+			text-align: justify;
+			border-radius: 10px;
+			border: none;
+			padding: 2vh;
+			resize: none;
+			background: inherit;
+			border-bottom: 2px solid #fff;
+			transition: border-bottom 1s;
+			word-break: break-all;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		input:focus,
+		textarea:focus {
+			overflow: visible;
+			border: none;
+			outline: none;
+			border-bottom: 3px solid #03a9f4;
+		}
+
+		::placeholder {
+			color: #fff;
+		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		#submit {
+			width: 50vw;
+			max-width: 180px;
+			text-align: center;
+			color: #ff0066;
+			background: #fff;
+			border: none;
+			transition: background 1s;
+			transition: color 0.5s;
+			padding: 1%;
+			margin-top: 5%;
+			text-transform: uppercase;
+		}
+
+		#submit:hover {
+			color: #fff;
+			background: #03a9f4;
+			outline: none;
+		}
+
+		textarea {
+			width: 100%;
+		}
+
+		@media only screen and (max-width:1000px) {
+			input {
+				width: 100%;
 			}
 		}

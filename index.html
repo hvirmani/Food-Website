@@ -45,7 +45,7 @@
 			<small>Welcome to</small>
 			<h1>PUNJABI RESTAURANT</h1>
 			<small>One of the best restaurant of North India.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</small><br>
-			<button class="animated bounce delay-4s learn-btn" id="sign-in">BOOK A TABLE</button>
+			<a href="#book"><button class="animated bounce delay-4s learn-btn" id="sign-in">BOOK A TABLE</button></a>
 		</div>
 		<div class="chevron">
 			<a href="#about"><i class='fas fa-angle-down'></i></a>
@@ -267,6 +267,18 @@
 			</div>
 		</div>
 	</div>
+	<div class="book_table" id="book">
+		<h1>BOOK TABLE</h1>
+		<hr style="background: #3b97e6;width: 35vw;text-align: center;margin: auto;height: 2px;max-width: 200px;margin-bottom: 50px;">
+		<div class="book">
+			<form onsubmit="show();">
+				<input type="text" maxlength="50" id="input_txt" placeholder="Name..." required>
+				<input type="number" min="0" max="10" id="member" placeholder="Number of members..." required>
+				<textarea placeholder="Any Special Message" id="msg"></textarea>
+				<input type="submit" value="Submit" id="submit">
+			</form>
+		</div>
+	</div>
 	<div class="contributors" id="cont">
 		<h1>CONTRIBUTORS</h1>
 		<hr style="background: #3b97e6;width: 35vw;text-align: center;margin: auto;height: 2px;max-width: 200px;margin-bottom: 50px;">
@@ -318,7 +330,7 @@
 		</div>
 	</div>
 	<script src="file.js">
-		
+
 	</script>
 </body>
 
