@@ -428,7 +428,8 @@
 		}
 
 		.contributor_main:hover .contributor_name {
-			display: block;
+			display: flex;
+			justify-content: center;
 		}
 
 		.contributor_name {
@@ -441,11 +442,37 @@
 			background: #ff0066;
 			color: white;
 			display: none;
-			height: 65px;
 			transition: all 0.5s cubic-bezier(0.48, -0.28, 0.41, 1.4);
 			box-sizing: border-box;
 			overflow: hidden;
-			padding: auto 10px;
+			padding: 0 10px;
+		}
+
+		h3 {
+			margin: 15px 5px;
+		}
+
+		.price {
+			font-size: 25px;
+			margin: auto 5px;
+		}
+
+		.price::before {
+			content: '(';
+		}
+
+		.price::after {
+			content: ')';
+		}
+
+		.cart button {
+			border: none;
+			background: #09afff;
+			font-size: 35px;
+			color: #fff;
+			border-radius: 100%;
+			width: 60px;
+			height: 60px;
 		}
 
 		@media (max-width:768px) {
@@ -457,6 +484,17 @@
 			h1 {
 				font-size: 50px;
 			}
+		}
+
+		.cart {
+			position: absolute;
+			right: -25px;
+			bottom: -25px;
+			display: none;
+		}
+
+		.contributor_main:hover .cart {
+			display: block;
 		}
 
 		#a {
@@ -685,6 +723,7 @@
 		.book_table {
 			min-height: 40vh;
 			text-align: center;
+			margin: 30px auto;
 		}
 
 		.book {
@@ -734,7 +773,8 @@
 			margin: 0;
 		}
 
-		#submit {
+		#submit,
+		#give {
 			width: 50vw;
 			max-width: 180px;
 			text-align: center;
@@ -743,12 +783,13 @@
 			border: none;
 			transition: background 1s;
 			transition: color 0.5s;
-			padding: 1%;
+			padding: 10px;
 			margin-top: 5%;
 			text-transform: uppercase;
 		}
 
-		#submit:hover {
+		#submit:hover,
+		#give:hover {
 			color: #fff;
 			background: #03a9f4;
 			outline: none;
@@ -767,3 +808,60 @@
 		li {
 			font-size: 27px;
 		}
+
+		#cart {
+			min-height: 50vh;
+			text-align: center;
+			display: none;
+			margin: 10px auto;
+		}
+
+		.cart_main {
+			min-height: 30vh;
+			width: 100vw;
+			background: #ff0066;
+			padding: 20px;
+			color: #fff;
+		}
+
+		#cart_content {
+			max-width: 800px;
+			margin: auto;
+		}
+
+		#cart_content li {
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			text-decoration: none;
+		}
+
+		.item_name {
+			flex: 0 0 60%;
+		}
+
+		@media (max-width:1000px) {
+			.item_name {
+				flex: 0 0 40%;
+			}
+		}
+
+		.item_name:hover {
+			text-decoration: line-through;
+		}
+
+		hr {
+			border: none;
+		}
+
+		#cart_content li span {
+			margin: auto 20px;
+		}
+
+		#give,
+		#submit {
+			max-width: 250px;
+		}
+#query .item_name{
+	text-decoration: none;
+}

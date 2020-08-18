@@ -173,63 +173,78 @@
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="a">
 					<div class="contributor_name">
-						<h3>Pasta</h3>
+						<h3>Pasta</h3><span class="price">5$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class=" contributor_main col-md-12" id="b">
 
 					<div class="contributor_name">
-						<h3>Noodles</h3>
+						<h3>Noodles</h3><span class="price">8$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="c">
 
 					<div class="contributor_name">
-						<h3>Burger</h3>
+						<h3>Burger</h3><span class="price">4$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="d">
 
 					<div class="contributor_name">
-						<h3>Pizza</h3>
+						<h3>Pizza</h3><span class="price">12$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="e">
 					<div class="contributor_name">
-						<h3>Paneer Tikka</h3>
+						<h3>Paneer Tikka</h3><span class="price">15$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class=" contributor_main col-md-12" id="f">
 
 					<div class="contributor_name">
-						<h3>French Fries</h3>
+						<h3>French Fries</h3><span class="price">6$</span>
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="g">
 
 					<div class="contributor_name">
-						<h3>Brownie</h3>
+						<h3>Brownie</h3><span class="price">5$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="h">
 
 					<div class="contributor_name">
-						<h3>Doughnuts</h3>
+						<h3>Doughnuts</h3><span class="price">9$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 		</div>
@@ -237,34 +252,49 @@
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="i">
 					<div class="contributor_name">
-						<h3>Butter Chicken</h3>
+						<h3>Butter Chicken</h3><span class="price">22$</span>
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class=" contributor_main col-md-12" id="j">
 
 					<div class="contributor_name">
-						<h3>Chicken Wings</h3>
+						<h3>Chicken Wings</h3><span class="price">20$</span>
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="k">
 
 					<div class="contributor_name">
-						<h3>Chicken Roll</h3>
+						<h3>Chicken Roll</h3><span class="price">15$</span>
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6" id="contributor">
 				<div class="contributor_main col-md-12" id="l">
 
 					<div class="contributor_name">
-						<h3>Fried Chicken</h3>
+						<h3>Fried Chicken</h3><span class="price">19$</span>
+
 					</div>
+					<div class="cart"><button class="cart_icon">+</button></div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div id="cart">
+		<h1>MY CART</h1>
+		<hr style="background: #3b97e6;width: 35vw;text-align: center;margin: auto;height: 2px;max-width: 200px;margin-bottom: 50px;">
+		<div class="cart_main">
+			<ul id="cart_content">
+				<li id="query"><span class="item_name">Name</span><span class="item_quantity">Quantity</span><span class="item_amount">Amount</span></li>
+			</ul>
+			<input type="submit" value="Give Order" id="give" onclick="finish();">
 		</div>
 	</div>
 	<div class="book_table" id="book">
@@ -275,7 +305,7 @@
 				<input type="text" maxlength="50" id="input_txt" placeholder="Name..." required>
 				<input type="number" min="0" max="10" id="member" placeholder="Number of members..." required>
 				<textarea placeholder="Any Special Message" id="msg"></textarea>
-				<input type="submit" value="Submit" id="submit">
+				<input type="submit" value="BOOK TABLE" id="submit">
 			</form>
 		</div>
 	</div>
@@ -330,6 +360,9 @@
 		</div>
 	</div>
 	<script src="file.js">
+
+	</script>
+	<script>
 
 	</script>
 </body>
