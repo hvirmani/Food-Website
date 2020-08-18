@@ -107,6 +107,10 @@
 			text-decoration: line-through;
 		}
 
+		#act {
+			text-decoration: line-through;
+		}
+
 		a {
 			text-decoration: none;
 		}
@@ -758,4 +762,8 @@
 			input {
 				width: 100%;
 			}
+		}
+
+		li {
+			font-size: 27px;
 		}
