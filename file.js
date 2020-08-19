@@ -14,9 +14,24 @@ function toggle() {
 	var navo = document.getElementById("bars");
 	navo.classList.toggle("active");
 }
-function finish(){
+
+function finish() {
 	alert(`Congratulations your order has been placed.\nPlease pay ${total}$ and grab your meal.`);
+	for (k = close.length - 1; k > 0; k--) {
+
+		var parent = close[k].parentElement;
+
+		var balance = parseInt(close[k].parentElement.children[2].textContent.split("$")[0]);
+		total -= balance;
+		close[k].parentElement.parentElement.removeChild(parent);
+		alert(total);
+	}
+	if (total <= 0) {
+		document.getElementById("cart").style.display = "none";
+		document.getElementById("book").style.display = "block";
+	}
 }
+
 function show() {
 	var txt = document.getElementById("input_txt").value;
 	var member = document.getElementById("member").value;
@@ -29,6 +44,7 @@ function show() {
 }
 var add = document.getElementsByClassName("cart");
 var total = 0;
+var close = document.getElementsByClassName("item_name");
 for (i = 0; i < add.length; i++) {
 	add[i].onclick = function () {
 		var name = this.parentElement.parentElement.children[0].children[0].children[0].textContent;
@@ -53,7 +69,19 @@ for (i = 0; i < add.length; i++) {
 		element.innerHTML = `<span class="item_name">${name}</span><span class="item_quantity">1</span><span class="item_amount">${amount}$</span>`
 		document.getElementById("cart_content").appendChild(element);
 		document.getElementById("cart").style.display = "block";
-		document.getElementById("book").style.display="none";
+		document.getElementById("book").style.display = "none";
+		for (k = 1; k < close.length; k++) {
+			close[k].onclick = function () {
+				var parent = this.parentElement;
+				this.parentElement.parentElement.removeChild(parent);
+				var balance = parseInt(this.parentElement.children[2].textContent.split("$")[0]);
+				total -= balance;
+				if (total <= 0) {
+					document.getElementById("cart").style.display = "none";
+					document.getElementById("book").style.display = "block";
+				}
+			}
+		}
 	}
 
 }
